@@ -10,7 +10,7 @@ import com.sinensia.electrodomesticos.electrodomestico.Electrodomestico;
 import com.sinensia.electrodomesticos.electrodomestico.ElectrodomesticoImpl;
 import com.sinensia.electrodomesticos.enumerados.ElectrodomesticoConsumoEnergeticoEnum;
 import com.sinensia.electrodomesticos.lavadora.Lavadora;
-import com.sinensia.electrodomesticos.television.Television;
+import com.sinensia.electrodomesticos.television.TelevisionImpl;
 
 public class ElectrodomesticosUtil {
 
@@ -25,11 +25,11 @@ public class ElectrodomesticosUtil {
 				new Lavadora(15d, ElectrodomesticoConsumoEnergeticoEnum.B, new ColorImpl("", Colores.NEGRO), 35d, 15),
 				new Lavadora(9d, ElectrodomesticoConsumoEnergeticoEnum.D, new ColorImpl("", Colores.ROJO), 20d, 23),
 
-				new Television(),
-				new Television(35d, 12d),
-				new Television(10d, ElectrodomesticoConsumoEnergeticoEnum.A, new ColorImpl("", Colores.GRIS), 10d, 21.5, false),
-				new Television(15d, ElectrodomesticoConsumoEnergeticoEnum.B, new ColorImpl("", Colores.NEGRO), 10d, 55.0, true),
-				new Television(9d, ElectrodomesticoConsumoEnergeticoEnum.D, new ColorImpl("", Colores.ROJO), 10d, 65.5, true)
+				new TelevisionImpl(),
+				new TelevisionImpl(35d, 12d),
+				new TelevisionImpl(10d, ElectrodomesticoConsumoEnergeticoEnum.A, new ColorImpl("", Colores.GRIS), 10d, 21.5, false),
+				new TelevisionImpl(15d, ElectrodomesticoConsumoEnergeticoEnum.B, new ColorImpl("", Colores.NEGRO), 10d, 55.0, true),
+				new TelevisionImpl(9d, ElectrodomesticoConsumoEnergeticoEnum.D, new ColorImpl("", Colores.ROJO), 10d, 65.5, true)
 				);		
 		return electrodomesticos;
 	}
@@ -42,7 +42,7 @@ public class ElectrodomesticosUtil {
 			if(e instanceof Lavadora) {
 				sumaLavadoras += e.precioFinal();
 			}
-			if(e instanceof Television) {
+			if(e instanceof TelevisionImpl) {
 				sumaTelevisiones += e.precioFinal();
 			}
 			sumaTotal += e.precioFinal();

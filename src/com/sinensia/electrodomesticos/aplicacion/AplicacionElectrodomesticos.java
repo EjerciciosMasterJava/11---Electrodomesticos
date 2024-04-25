@@ -3,13 +3,15 @@ import java.util.List;
 
 import com.sinensia.electrodomesticos.electrodomestico.Electrodomestico;
 import com.sinensia.electrodomesticos.lavadora.Lavadora;
+import com.sinensia.electrodomesticos.television.Television;
+import com.sinensia.electrodomesticos.television.TelevisionImpl;
 import com.sinensia.electrodomesticos.utilidad.ElectrodomesticosUtil;
 
 public class AplicacionElectrodomesticos {
 
 	public static void main(String[] args) {
 		
-		// Instanciar lista de electrodomesticos
+		// Instanciar lista de electrodomesticos de prueba
 		List<Electrodomestico> electrodomesticos = ElectrodomesticosUtil.getElectrodomesticosPrueba();
 		
 		// Mostrar precios de la lista de electrodomesticos
@@ -22,6 +24,8 @@ public class AplicacionElectrodomesticos {
 		System.out.println(lavadora.comprobarConsumoEnergetico('a'));
 		
 		
+		Television television = new TelevisionImpl();
+		television.encender();
 		
 	}
 	
