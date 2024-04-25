@@ -26,6 +26,9 @@ public class AplicacionElectrodomesticos {
 		
 		Television television = new TelevisionImpl();
 		television.encender();
+		television.apagar();
+		((TelevisionImpl)television).setPrecio(200d);
+		System.out.println(((TelevisionImpl)television).precioFinal());
 		
 	}
 	
